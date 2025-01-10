@@ -23,4 +23,4 @@ let alter = 45;
 
 begruessung(vorname, nachname, alter);
 begruessung();
-begruessung(nachname, alter);
+begruessung(undefined,nachname, alter);
