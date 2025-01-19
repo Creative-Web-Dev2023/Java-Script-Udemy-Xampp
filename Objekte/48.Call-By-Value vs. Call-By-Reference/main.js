@@ -14,7 +14,7 @@ const meineFunktion = function(v, o){
 
 }
 meineFunktion(meineVariable, meinObjekt);
-console.log(meineVariable); // call-by-Value
+console.log(meineVariable); // call-by-Value  
 console.log(meinObjekt.zahl); // cal_by-reference
 
 let konto = {
