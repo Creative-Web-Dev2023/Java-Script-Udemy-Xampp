@@ -4,7 +4,7 @@
 let neuSortiert = zahlen.sort();
 console.log(neuSortiert);*/
 
-//Die sort()-Methode für Arrays wandelt Elem. des ASrrays standardsmäßig in strings um und vergleicht diese
+//Die sort()-Methode für Arrays wandelt Elem. des Arrays standardsmäßig in strings um und vergleicht diese
 let worte =["Zahl", "Wahnsinn", "Mangel", "Abspann"];
 let worteNeu =worte.sort();
 console.log(worteNeu);
