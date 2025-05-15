@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript</title>
+	<!-- Ohne async und defer_Attribut wird Skript ausgeführt BEVOR Seite weiter geparsed wird. -->
+	<!-- <script src="main.js"></script> -->
+	<!--Mit async_Attribut: Skript wird asynchron geladen und ausgeführt, während die Seite weiter geparsed wird. -->
+	<!-- <script src="main.js" async></script> -->
+	
+</head>
+<body>
+   <div id="test">Ich bin ein &lt;div&gt;-Element</div>
+   <!-- Mit defer_Attribut: Skript wird geladen, aber erst ausgeführt, wenn die Seite vollständig geparsed ist. -->	
+	<!--Trotzdem kann es ratsam sein, Scripte erst direkt vor dem Body Tag einzubinden> -->
+   <script src="main.js" defer></script>
+</body>
+</html>
