@@ -18,12 +18,11 @@
 
   // Instanz erstellen
 let k = new Konto("DE6206752564419854", ["Max Mustermann"], 3500);
-k.einzahlen=1000;
-k.abheben=500;
+let kk = new Kinderkonto("DE62067525644198755", ["Mona Mustermann"], 250, 500);
+k.einzahlen = 1000;
+k.abheben = 500;
 console.log(k.kontostand_abfragen);
-
-// k.einzahlen(1000);
-// k.abheben(500);
-// console.log(k.kontostand_abfragen());
 console.log(k);
+kk.abheben(750);
+console.log(kk)
 

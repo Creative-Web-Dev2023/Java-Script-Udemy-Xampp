@@ -9,13 +9,13 @@ class Konto{
         this.aktiv = true;
         
     }
-    einzahlen(einzahlung){
+    set einzahlen(einzahlung){
         this.saldo += einzahlung;
     }
-    abheben(auszahlung){
+    set abheben(auszahlung){
         this.saldo -= auszahlung;
     }
-    kontostand_abfragen(){
+     get kontostand_abfragen(){
         return this.saldo;
     }
 }
