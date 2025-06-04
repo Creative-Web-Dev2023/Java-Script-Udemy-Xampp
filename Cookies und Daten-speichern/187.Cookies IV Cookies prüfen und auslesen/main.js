@@ -1,5 +1,6 @@
 "use strict";
 
+
 //Syntax: document.cookie =  "cookie_name =[cookie_wert] [;max-age=zeit_in_sec]"
 
 //COOKIES SETZEN
@@ -25,6 +26,7 @@ const set_cookie = function(name, wert, haltbarkeit) {
 };
 set_cookie("passwort", "%A$g[}hm;", 60*60*2); // 2 Stunden
 
+
  //COOKIES ÜBERSCHREIBEN
  set_cookie("zahlen", "1234", 60*60);
  set_cookie("zahlen", "5678", 60*60*1.5)
@@ -36,4 +38,29 @@ const delete_cookie = function(name) {
 delete_cookie("ein key; value-paare");
 
 
+//COOKIES AUSLESEN
+const get_cookie = function(name) {
+ let cookie_array = document.cookie.split("; ");
+ let regex = new RegExp(`^\\s?${encodeURIComponent(name)}=`);
+    for (let cookie of cookie_array) {
+        if (cookie.match(regex)) {
+            return decodeURIComponent(cookie.replace(regex, ""));
+        }
+    }
+
+}
+console.log(get_cookie("mein_alter")); // "mein_alter=26"
 console.log(document.cookie);
+
+//COOKIES PRÜFEN
+const has_cookie = function(name) {
+   let cookie_array = document.cookie.split("; ");
+ let regex = new RegExp(`^\\s?${encodeURIComponent(name)}=`);
+    for (let cookie of cookie_array) {
+        if (cookie.match(regex)) {
+            return true;
+        }
+    }
+    return false;
+}
+console.log(has_cookie("nachname")); // true
